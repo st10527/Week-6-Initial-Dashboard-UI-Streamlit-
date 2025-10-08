@@ -28,11 +28,16 @@ Alternatively, you can use the example below.
 
 If needed, copy the following and save it as log.csv in the same folder:
 
-Timestamp,CPU,Memory,Disk,Ping_Status,Ping_ms\\
-2025-10-01 12:00:00,15.2,40.1,58.9,UP,22.5\\
-2025-10-01 12:00:10,18.3,42.0,59.1,UP,20.8\\
-2025-10-01 12:00:20,19.5,43.2,59.4,UP,19.7\\
-2025-10-01 12:00:30,22.0,44.5,59.6,DOWN,-1\\
+Timestamp,CPU,Memory,Disk,Ping_Status,Ping_ms
+
+2025-10-01 12:00:00,15.2,40.1,58.9,UP,22.5
+
+2025-10-01 12:00:10,18.3,42.0,59.1,UP,20.8
+
+2025-10-01 12:00:20,19.5,43.2,59.4,UP,19.7
+
+2025-10-01 12:00:30,22.0,44.5,59.6,DOWN,-1
+
 2025-10-01 12:00:40,21.1,44.2,59.3,UP,21.2
 
 
