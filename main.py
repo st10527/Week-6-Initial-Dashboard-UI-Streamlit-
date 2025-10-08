@@ -4,6 +4,7 @@ import csv
 import os
 import time
 import subprocess
+import platform
 
 def get_system_info():
     now = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
@@ -15,21 +16,23 @@ def get_system_info():
 
 def ping_host(host):
     try:
-        # TODO: Replace 'ping' command for cross-platform if needed
-        output = subprocess.check_output(["ping", "-c", "1", host], stderr=subprocess.DEVNULL).decode()
+        # Handle cross-platform ping command
+        param = "-n" if platform.system().lower() == "windows" else "-c"
+        output = subprocess.check_output(["ping", param, "1", host], stderr=subprocess.DEVNULL).decode()
         ms = parse_ping_time(output)
         return ("UP", ms)
     except:
         return ("DOWN", -1)
 
 def parse_ping_time(output):
-    # TODO: Extract ping time from command output
-    # For example: "time=21.3 ms"
     for line in output.splitlines():
         if "time=" in line:
             parts = line.split("time=")
             if len(parts) > 1:
-                return float(parts[1].split()[0])
+                try:
+                    return float(parts[1].split()[0])
+                except ValueError:
+                    return -1
     return -1
 
 def write_log(data):
