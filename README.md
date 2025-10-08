@@ -67,7 +67,3 @@ streamlit run app.py
 💡 Bonus (Optional)
 	•	Add sidebar filters or search
 	•	Highlight Ping_Status with colors
-
-
-這樣學生不論有沒有跟上前幾週都能照著做、不中斷，你也能順利銜接每週任務與評分 🎯
-要我直接繼續幫你設計 Week 7 嗎？（主題是把 log 存進 SQLite，並實作簡單搜尋）✅
